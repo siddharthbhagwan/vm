@@ -213,7 +213,7 @@
 	#header
 	{
 		position: relative;
-		height: 150px;
+		height: 100px;
 	}
 
 /*********************************************************************************/
@@ -223,7 +223,7 @@
 	#logo
 	{
 		position: absolute;
-		top: 3em;
+		top: 2em;
 		left: 0;
 		width: 100%;
 	}
@@ -270,9 +270,9 @@
 	{
 		display: block;
 		padding: 0em 1.5em;
-		height: 150px;
+		height: 100px;
 		letter-spacing: 0.20em;
-		line-height: 150px;
+		line-height: 100px;
 		text-decoration: none;
 		font-size: 0.90em;
 		font-weight: 600;
@@ -364,7 +364,7 @@
 	#copyright
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 2em 0em;
 	}
 	
 	#copyright p
