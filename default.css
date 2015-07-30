@@ -1,20 +1,14 @@
-	html, body
-	{
-		height: 100%;
-	}
+	html, body { height: 100%; }
 	
 	body
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #2372DE url(images/bg01.png) repeat;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 11pt;
 		font-weight: 300;
-		color: #6c6c6c
 	}
-	
-	
+
 	h1, h2, h3
 	{
 		margin: 0;
@@ -23,10 +17,7 @@
 		color: #454445;
 	}
 	
-	p, ol, ul
-	{
-		margin-top: 0;
-	}
+	p, ol, ul	{	margin-top: 0; }
 	
 	ol, ul
 	{
@@ -34,44 +25,78 @@
 		list-style: none;
 	}
 	
-	p
-	{
-		line-height: 180%;
-	}
+	p	{	line-height: 180%; }
 	
-	strong
-	{
-	}
+	a	{	color: #2372DE;	}
 	
-	a
-	{
-		color: #2372DE;
-	}
-	
-	a:hover
-	{
-		text-decoration: none;
-	}
-	
-/*	.container
-	{
-		margin: 0px auto;
-		width: 1200px;
-	}*/
-	
+	a:hover	{	text-decoration: none; }
+
+/*********************************************************************************/
+/* Misc Styling                                                                  */
+/*********************************************************************************/
+
+.designation {
+	font-weight: 400;
+}
+
+.gna-list > td, .distinctions-list > td {
+	min-height: 340px;
+}
+
+.gna-list li, .distinctions-list li {
+	margin-bottom: 10px;
+}
+
+.icon-certificate {
+	font-size: 6px;
+	margin-right: 5px;
+}
+
+.row-heading {
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#read-more {
+	cursor: pointer;
+}
+
+#read-more-points {
+	display: none;
+}
+
+#distinctions {
+	border-right: 1px solid #DDDDDD;
+	padding-right: 5px;
+}
+
+/*********************************************************************************/
+/* Responsive Styling                                                            */
+/*********************************************************************************/
+
+#mobile-social { display: none; }
+#desktop-social { display: inherit; }
+
+@media only screen and (max-width: 768px){
+	#mobile-social { display: inherit; }
+	#desktop-social { display: none; }
+	#logo { left: -1em !important; }
+	#distinctions { border-right: none; margin-bottom: 35px; }
+	#header-wrapper { border-bottom: none !important; }
+	#header { border-bottom: 1px solid #DDDDDD !important; margin-bottom: 12px; }
+}
+
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
 
-	.image
-	{
-		display: inline-block;
-	}
+	.image { display: inline-block;	}
 	
 	.image img
 	{
 		display: block;
-		width: 65%;
+		width: 85%;
 	}
 	
 	.image-full
@@ -102,93 +127,26 @@
 	.main-img {
 		border: 1px solid #DDDDDD;
 		border-radius: 5px;
-		padding: 10px
+		padding: 3px
 	}
-
 /*********************************************************************************/
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
 
-	ul.contact
-	{
-		margin: 0;
-		padding: 2em 0em 0em 0em;
-		list-style: none;
-	}
-	
-	ul.contact li
-	{
-		display: inline-block;
-		padding: 0em 0.30em;
-		font-size: 1em;
-	}
-	
-	ul.contact li span
-	{
-		display: none;
-		margin: 0;
-		padding: 0;
-	}
-	
-	ul.contact li a
-	{
-		color: #FFF;
-	}
-	
-	ul.contact li a:before
-	{
-		display: inline-block;
-		background: #3f3f3f;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: center;
-		color: #FFFFFF;
-	}
-	
-	ul.contact li a.icon-twitter:before { background: #2DAAE4; }
-	ul.contact li a.icon-facebook:before { background: #39599F; }
-	ul.contact li a.icon-dribbble:before { background: #C4376B;	}
-	ul.contact li a.icon-tumblr:before { background: #31516A; }
-	ul.contact li a.icon-rss:before { background: #F2600B; }
+	.contact-icons { font-size: 13px; text-align: center; }
+	.contact-me { font-weight: 400; font-size: 17px; text-align: center; margin-bottom: 12px;}
 
-/*********************************************************************************/
-/* Button Style                                                                  */
-/*********************************************************************************/
+	.icon { padding: 0px 5px 0px 5px; }
+	.icon-twitter { color: #2DAAE4;	}
+	.icon-facebook { color: #39599F;	}
+	.icon-google-plus { color: #DD4B39; }
+	.icon-envelope { color: #000000; }
 
-	.button
-	{
-		display: inline-block;
-		padding: 1em 3em;
-		background: #2372DE url(images/bg01.png);
-		-moz-transition: opacity 0.25s ease-in-out;
-		-webkit-transition: opacity 0.25s ease-in-out;
-		-o-transition: opacity 0.25s ease-in-out;
-		-ms-transition: opacity 0.25s ease-in-out;
-		transition: opacity 0.25s ease-in-out;
-		letter-spacing: 0.20em;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-weight: 600;
-		color: #FFF;
-	}
-		
-		.button-big
-		{
-			padding: 1.6em 4em;
-			font-size: 1.4em;
-			font-weight: 900;
-		}
-			
 /*********************************************************************************/
 /* Heading Titles                                                                */
 /*********************************************************************************/
 
-	.title
-	{
-		margin-bottom: 3em;
-	}
+	.title { margin-bottom: 3em; }
 
 	.title h2
 	{
@@ -200,10 +158,14 @@
 	.title .byline
 	{
 		letter-spacing: 0.15em;
-		/*text-transform: uppercase;*/
 		font-weight: 400;
 		font-size: 1.1em;
 		color: #6F6F6F;
+	}
+
+	.profile-heading {
+		text-align: center;
+		margin: 30px 0px 30px 0px;
 	}
 
 /*********************************************************************************/
@@ -213,8 +175,12 @@
 	#header
 	{
 		position: relative;
-		height: 100px;
+		height: 50px;
+		border-bottom: none;
+		margin-bottom: none;
 	}
+
+	#header-wrapper { border-bottom: 1px solid #DDDDDD;	}
 
 /*********************************************************************************/
 /* Logo                                                                          */
@@ -223,18 +189,17 @@
 	#logo
 	{
 		position: absolute;
-		top: 2em;
+		top: 1em;
 		left: 0;
-		width: 100%;
+		margin-right: 25px;
 	}
 	
 	#logo h1
 	{
 		display: inline-block;
-		font-size: 2.5em;
+		font-size: 1.25em;
 		text-transform: uppercase;
 		font-weight: 700;
-		color: #FFF;
 	}
 	
 	#logo a
@@ -254,10 +219,7 @@
 		top: 0;
 	}
 	
-	#menu ul
-	{
-		display: inline-block;
-	}
+	#menu ul { display: inline-block;	}
 	
 	#menu li
 	{
@@ -270,64 +232,35 @@
 	{
 		display: block;
 		padding: 0em 1.5em;
-		height: 100px;
+		height: 50px;
 		letter-spacing: 0.20em;
-		line-height: 100px;
+		line-height: 50px;
 		text-decoration: none;
-		font-size: 0.90em;
+		font-size: 0.80em;
 		font-weight: 600;
 		text-transform: uppercase;
 		outline: 0;
-		color: #ACCFFF;
+		color: #000000;
 	}
 	
-	#menu li:hover a, #menu li.active a, #menu li.active span
-	{
+	#menu li:hover a, #menu li.active a, #menu li.active span	{
 	}
 	
 	#menu .current_page_item a
 	{
-		background: #2A76DC;
-		color: #FFF;
+		background: #F5F5F5;
+		color: #000000;
+		border-right: 1px solid #DDDDDD;
+		border-left: 1px solid #DDDDDD;
 	}
 
 /*********************************************************************************/
-/* Banner                                                                        */
+/* table                                                                         */
 /*********************************************************************************/
-	
-	#banner-wrapper
-	{
-		overflow: hidden;
-		padding: 5em 0em;
-		background: #F6F6F6;
-	}
 
-	#banner .box-left
-	{
-		float: left;
-	}
-
-	#banner .box-right
-	{
-		float: right;
-	}
-	
-	#banner h2
-	{
-		margin: 0em;
-		padding: 0em;
-		font-weight: 400;
-		font-size: 3em;
-		color: #3E454C;
-	}
-	
-	#banner span
-	{
-		display: block;
-		padding-top: 0.50em;
-		font-size: 1.4em;
-		color: #2372DE;
-	}
+.specs-table {
+	border: 1px solid #DDDDDD;
+}
 
 /*********************************************************************************/
 /* Description                                                                   */
@@ -335,27 +268,25 @@
 
 #desc {
 	font-size: 16px;
+	font-weight: 400;
 }
 
 .sub-h1 {
-	font-size: 20px !important;
+	font-size: 20px;
 }
 
 /*********************************************************************************/
 /* Page                                                                          */
 /*********************************************************************************/
 
-	#wrapper
-	{
-		background: #FFF;
-	}
+	#wrapper {	background: #FFF;	}
 	
 	#page
 	{
 		overflow: hidden;
 		padding: 6em 0em 0em 0em;
+		margin-bottom: 15px;
 	}
-
 
 /*********************************************************************************/
 /* Copyright                                                                     */
@@ -364,7 +295,8 @@
 	#copyright
 	{
 		overflow: hidden;
-		padding: 2em 0em;
+		padding: 1em 0em;
+		border-top: 1px solid #DDDDDD;
 	}
 	
 	#copyright p
@@ -373,15 +305,14 @@
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 0.80em;
-		color: #ACCFFF;
+		color: #000000;
 	}
 	
 	#copyright a
 	{
 		text-decoration: none;
-		color: #ACCFFF;
+		color: #000000;
 	}
-
 
 /*********************************************************************************/
 /* Featured                                                                      */
@@ -393,27 +324,13 @@
 		padding: 4em 0em;
 		background: #FFF;
 		text-align: center;
-}
-
-	#featured .major h2
-	{
-		font-size: 3em;
 	}
 
-	#featured .title
-	{
-		margin-bottom: 1em;
-	}
+	#featured .title { margin-bottom: 1em; }
 	
-	#featured .title h2
-	{
-		font-size: 1.2em;
-	}
+	#featured .title h2	{	font-size: 1.2em;	}
 	
-	#featured h2
-	{
-		text-align: center;
-	}
+	#featured h2 { text-align: center; }
 
 	#featured .icon
 	{
@@ -421,7 +338,7 @@
 		display: block;
 		margin: 0px auto 20px auto;
 		line-height:  normal;
-		font-size: 6em;
+		font-size: 4em;
 		text-align: center;
 		color: #2372DE;
 	}
