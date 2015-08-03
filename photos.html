@@ -8,7 +8,6 @@ Name       : Uprightness
 Description: A two-column, fixed-width design with dark color scheme.
 Version    : 1.0
 Released   : 20130920
-
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,31 +16,58 @@ Released   : 20130920
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
-<link href="bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" /> -->
+<link href="css/lightGallery.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery.min.js"></script>
+<script src="js/lightGallery.min.js"></script>
+<script src="js/application.js"></script>
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 </head>
 <body>
 <div id="header-wrapper" class="container">
-	<div id="header" class="col-md-12">
-		<div id="logo">
-			<h1>Vilas Marathe</h1>
+	<div id="header" class="col-md-12 col-sm-12 col-xs-18">
+		<div id="logo" class="col-md-9 col-sm-8 col-xs-10">
+			<span class="col-md-3 col-sm-6 col-xs-8"><h1>Vilas Marathe</h1></span>
+			<span class="col-md-3 col-sm-6 col-xs-10" id="desktop-social">
+				<span class="contact-icons"><a href="#"><span class="icon icon-envelope"></span></a></span>
+				<span class="contact-icons"><a href="https://www.facebook.com/vilas.marathe.35"><span class="icon icon-facebook"></span></a></span>
+				<span class="contact-icons"><a href="https://twitter.com/vilasmarathe"><span class="icon icon-twitter"></span></a></span>
+				<span class="contact-icons"><a href="https://plus.google.com/102744659121193020884/posts"><span class="icon icon-google-plus"></span></a></span>
+			</span>
 		</div>
-		<div id="menu">
-			<ul>
-				<li><a href="index.html" title="">Home</a></li>
-				<li class="current_page_item"><a href="photos.html" title="">Photos</a></li>
+		<div id="menu" class="col-md-3 col-sm-4 col-xs-8">
+			<ul class="pull-right">
+				<li class="current_page_item"><a href="index.html" title="">Home</a></li>
+				<li><a href="photos.html" title="">Photos</a></li>
 			</ul>
 		</div>
+	</div>
+
+	<div id="mobile-social" class="col-xs-6 col-xs-offset-4">
+		<span class="contact-icons"><a href="#"><span class="icon icon-envelope"></span></a></span>
+		<span class="contact-icons"><a href="https://www.facebook.com/vilas.marathe.35"><span class="icon icon-facebook"></span></a></span>
+		<span class="contact-icons"><a href="https://twitter.com/vilasmarathe"><span class="icon icon-twitter"></span></a></span>
+		<span class="contact-icons"><a href="https://plus.google.com/102744659121193020884/posts"><span class="icon icon-google-plus"></span></a></span>
 	</div>
 </div>
 
 <div id="wrapper">
 	<div class="container">
-
+		<div id="page" class="row">
+			<ul id="lightGallery">
+			  <li data-src="images/img1.jpg">
+			    <img src="images/img1.jpg" class="thumbnail" />
+			  </li>
+			  <li data-src="images/img2.jpg">
+			    <img src="images/img2.jpg" class="thumbnail" />
+			  </li>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <div id="copyright" class="col-md-12">
