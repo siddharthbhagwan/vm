@@ -71,7 +71,7 @@
 	padding-right: 5px;
 }
 
-.thumbnail { height: 150px; width: 200px; }
+.thumbnail { height: 150px; width: 150px; }
 
 /*********************************************************************************/
 /* Responsive Styling                                                            */
@@ -315,6 +315,27 @@
 		text-decoration: none;
 		color: #000000;
 	}
+
+/*********************************************************************************/
+/* Light Gallery                                                                 */
+/*********************************************************************************/
+
+.gallery li {
+	display: block;
+	float: left;
+	height: 100px;
+	margin-bottom: 6px;
+	margin-right: 6px;
+	width: 200px;
+	height: 150px;
+}
+.gallery li a {
+	height: 150px;
+	width: 200px;
+}
+.gallery li a img {
+	max-width: 200px;
+}
 
 /*********************************************************************************/
 /* Featured                                                                      */
