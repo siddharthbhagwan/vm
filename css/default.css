@@ -281,7 +281,7 @@
 /* Page                                                                          */
 /*********************************************************************************/
 
-	#wrapper {	background: #FFF;	}
+	#wrapper {	background: #FFF; min-height: 600px;	}
 	
 	#page
 	{
