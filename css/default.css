@@ -66,14 +66,35 @@
 	display: none;
 }
 
-#distinctions {
+/*#distinctions {
 	border-right: 1px solid #DDDDDD;
 	padding-right: 5px;
-}
+}*/
 
 .thumbnail { height: 150px; width: 150px; }
 
-/*********************************************************************************/
+.section2 {
+	background-color: #F8F8F8 !important;
+}
+
+.section-title {
+	font-size: 25px;
+	font-weight: 400;
+	font-size: 2.0em;
+	color: #323232;
+	margin-bottom: 30px;
+}
+
+ /*dainik hindusthan*/
+.dh {
+
+}
+
+.dh-content {
+	margin: 12px auto 12px auto;
+}
+
+/********************************************************************************
 /* Responsive Styling                                                            */
 /*********************************************************************************/
 
@@ -84,7 +105,7 @@
 	#mobile-social { display: inherit; }
 	#desktop-social { display: none; }
 	#logo { left: -1em !important; }
-	#distinctions { border-right: none; margin-bottom: 35px; }
+	/*#distinctions { border-right: none; margin-bottom: 35px; }*/
 	#header-wrapper { border-bottom: none !important; }
 	#header { border-bottom: 1px solid #DDDDDD !important; margin-bottom: 12px; }
 }
@@ -286,7 +307,7 @@
 	#page
 	{
 		overflow: hidden;
-		padding: 6em 0em 0em 0em;
+		padding: 6em 0em 6em 0em;
 		margin-bottom: 15px;
 	}
 
