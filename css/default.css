@@ -4,8 +4,8 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 11pt;
+		font-family: 'Quattrocento Sans', sans-serif;
+		font-size: 17px;
 		font-weight: 300;
 	}
 
@@ -45,6 +45,8 @@
 
 .gna-list li, .distinctions-list li {
 	margin-bottom: 10px;
+	text-indent: -25px;
+	padding-left: 25px;
 }
 
 .icon-certificate {
@@ -54,8 +56,9 @@
 
 .row-heading {
 	text-align: left;
-	font-weight: bold;
+	font-weight: 400;
 	margin-bottom: 10px;
+	font-size: 22px;
 }
 
 #read-more {
@@ -66,15 +69,16 @@
 	display: none;
 }
 
-/*#distinctions {
-	border-right: 1px solid #DDDDDD;
-	padding-right: 5px;
-}*/
+.section-title-hr {
+	margin-top: 0px;
+	border: 1px solid black;
+	width: 70%
+}
 
 .thumbnail { height: 150px; width: 150px; }
 
-.section2 {
-	background-color: #F8F8F8 !important;
+.section2, .section3 {
+	background-color: #F8F8F8;
 }
 
 .section-title {
@@ -85,13 +89,43 @@
 	margin-bottom: 30px;
 }
 
- /*dainik hindusthan*/
-.dh {
-
+.dh-content {
+	margin: 14px auto 14px auto;
+	font-weight: 300;
+	text-align: justify;
 }
 
-.dh-content {
-	margin: 12px auto 12px auto;
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: " ";
+  position: absolute;
+  height: 1px;
+  width: 9600px;
+  border-bottom: 2px solid #000000;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  margin-left: 5px;
+  z-index: 0;
+}
+
+.contact-row {
+	/*text-align: center;*/
+	/*font-size: 16px;*/
+}
+
+hr {
+	/*margin-bottom: 35px;*/
+}
+
+.fa {
+	margin-right: 5px;
+	font-size: 13px;
 }
 
 /********************************************************************************
@@ -290,7 +324,6 @@
 /*********************************************************************************/
 
 #desc {
-	font-size: 16px;
 	font-weight: 400;
 }
 
@@ -302,7 +335,7 @@
 /* Page                                                                          */
 /*********************************************************************************/
 
-	#wrapper {	background: #FFF; min-height: 600px;	}
+	#wrapper { min-height: 600px;	}
 	
 	#page
 	{
