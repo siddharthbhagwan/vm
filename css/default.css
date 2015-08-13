@@ -130,9 +130,7 @@
 	#mobile-social { display: inherit; }
 	#desktop-social { display: none; }
 	#logo { left: -1em !important; }
-	/*#distinctions { border-right: none; margin-bottom: 35px; }*/
 	#header-wrapper { border-bottom: none !important; }
-	#header { border-bottom: 1px solid #DDDDDD !important; margin-bottom: 12px; }
 }
 
 /*********************************************************************************/
@@ -248,47 +246,232 @@
 /* Menu                                                                          */
 /*********************************************************************************/
 
-	#menu
-	{
-		position: absolute;
-		right: 0;
-		top: 0;
+	#cssmenu,
+	#cssmenu ul,
+	#cssmenu ul li,
+	#cssmenu ul li a,
+	#cssmenu #menu-button {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  list-style: none;
+	  line-height: 1;
+	  display: block;
+	  position: relative;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
 	}
 	
-	#menu ul { display: inline-block;	}
-	
-	#menu li
-	{
-		display: block;
-		float: left;
-		text-align: center;
+	#cssmenu:after,	
+	#cssmenu > ul:after {
+	  content: ".";
+	  clear: both;
+	  visibility: hidden;
+	  line-height: 0;
+	  height: 0;
 	}
 	
-	#menu li a, #menu li span
-	{
-		display: block;
-		padding: 0em 1.5em;
-		height: 50px;
-		letter-spacing: 0.20em;
-		line-height: 50px;
-		text-decoration: none;
-		font-size: 0.80em;
-		font-weight: 600;
-		text-transform: uppercase;
-		outline: 0;
-		color: #000000;
+	#cssmenu #menu-button {
+	  display: none;
 	}
 	
-	#menu li:hover a, #menu li.active a, #menu li.active span	{
+	#cssmenu {
+	  width: 100%;
+	  border-radius: 4px;
+	  line-height: 1;
+	}
+	.gabba {
+	  float: left !important;
 	}
 	
-	#menu .current_page_item a
-	{
-		background: #F5F5F5;
-		color: #000000;
-		border-right: 1px solid #DDDDDD;
-		border-left: 1px solid #DDDDDD;
+	#cssmenu > ul > li {
+	  float: left;
+	  text-transform: uppercase;
 	}
+
+	.cssmenu-opts {
+	  float: right;
+	}
+
+	.cssmenu-opts > li {
+	  float: left;
+	}
+	
+	#cssmenu.align-center > ul {
+	  font-size: 0;
+	  text-align: center;
+	}
+	
+	#cssmenu.align-center > ul > li {
+	  float: none;
+	}
+	
+	#cssmenu.align-right > ul > li {
+	  float: right;
+	}
+	
+	#cssmenu > ul > li > a {
+	  padding: 20px 25px 21px 25px;
+	  font-size: 15px;
+	  text-decoration: none;
+	  color: #000000;
+	  -webkit-transition: all .2s ease;
+	  -moz-transition: all .2s ease;
+	  -ms-transition: all .2s ease;
+	  -o-transition: all .2s ease;
+	  transition: all .2s ease;
+	}
+	
+	#cssmenu > ul > li:first-child > a {
+	  border-top-left-radius: 4px;
+	  border-bottom-left-radius: 4px;
+	}
+	
+	#cssmenu.align-center > ul > li:first-child > a {
+	  border-radius: 0;
+	}
+	
+	#cssmen.align-right > ul > li:first-child > a {
+	  border-top-left-radius: 0;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	  border-top-right-radius: 0;
+	}
+	
+	#cssmenu > ul > li:hover > a,
+	#cssmenu > ul > li.active {
+	  background-color: #F5F5F5;
+	}
+	
+	#cssmenu > ul > li:hover > a,
+	
+	#cssmenu > ul > li > a:hover {
+	  background: #F5F5F5;
+	}
+	
+	#cssmenu > ul > li:after {
+	  content: '';
+	  position: absolute;
+	  top: 18px;
+	  right: 0;
+	  display: block;
+	  height: 20px;
+	  width: 1px;
+	  opacity: .15;
+	  background: rgba(0, 0, 0, 0.7);
+	  background: linear-gradient(to top, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+	  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+	  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+	  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+	  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), #000000, rgba(0, 0, 0, 0));
+	}
+	
+	#cssmenu.align-right > ul > li:after {
+	  right: auto;
+	  left: -1px;
+	}
+	
+	#cssmenu > ul > li:before {
+	  content: '';
+	  position: absolute;
+	  top: 18px;
+	  right: -1px;
+	  display: block;
+	  height: 20px;
+	  width: 1px;
+	}
+	
+	#cssmenu.align-right > ul > li:before {
+	  right: auto;
+	  left: 0px;
+	}
+	
+	#cssmenu > ul > li:last-child:after,
+	
+	#cssmenu > ul > li:last-child:before {
+	  display: none;
+	}
+	
+	#cssmenu.small-screen {
+	  width: 100%;
+	}
+	
+	#cssmenu.small-screen > ul,
+	
+	#cssmenu.small-screen.align-center > ul {
+	  width: 100%;
+	  text-align: left;
+	}
+	
+	#cssmenu.small-screen > ul > li,
+	
+	#cssmenu.small-screen.align-center {
+	  float: none !important;
+	  display: block;
+	  border-top: 1px solid rgba(100, 100, 100, 0.1);
+	  text-transform: uppercase;
+	}
+	
+	#cssmenu.small-screen > ul > li > a {
+	  padding: 18px 25px;
+	}
+	
+	#cssmenu.small-screen > ul > li:after,
+	
+	#cssmenu.small-screen > ul > li:before {
+	  display: none;
+	}
+	
+	#cssmenu.small-screen #menu-button {
+	  display: block;
+	  padding: 18px 25px 19px 25px;
+	  cursor: pointer;
+	  font-size: 15px;
+	  text-decoration: none;
+	  color: #000000;
+	  text-transform: uppercase;
+	}
+	
+	#cssmenu.small-screen #menu-button.menu-opened {
+	  color: #444444;
+	}
+	
+	#cssmenu.small-screen #menu-button:after {
+	  content: "";
+	  position: absolute;
+	  right: 25px;
+	  top: 20px;
+	  display: block;
+	  -webkit-box-sizing: content-box;
+	  -moz-box-sizing: content-box;
+	  box-sizing: content-box;
+	  border-top: 2px solid #000000;
+	  border-bottom: 2px solid #000000;
+	  width: 18px;
+	  height: 3px;
+	}
+	
+	#cssmenu.small-screen #menu-button.menu-opened:after {
+	  border-top: 2px solid #444444;
+	  border-bottom: 2px solid #444444;
+	}
+	
+	#cssmenu.small-screen #menu-button:before {
+	  content: "";
+	  position: absolute;
+	  right: 25px;
+	  top: 30px;
+	  display: block;
+	  width: 18px;
+	  height: 2px;
+	  background: #000000;
+	}
+	
+	#cssmenu.small-screen #menu-button.menu-opened:before {
+	  background: #444444;
+	}
+
 
 /*********************************************************************************/
 /* table                                                                         */
