@@ -114,15 +114,6 @@
   z-index: 0;
 }
 
-.contact-row {
-	/*text-align: center;*/
-	/*font-size: 16px;*/
-}
-
-hr {
-	/*margin-bottom: 35px;*/
-}
-
 .fa {
 	margin-right: 5px;
 	font-size: 13px;
@@ -186,18 +177,6 @@ hr {
 		border-radius: 5px;
 		padding: 3px
 	}
-/*********************************************************************************/
-/* Social Icon Styles                                                            */
-/*********************************************************************************/
-
-	.contact-icons { font-size: 13px; text-align: center; }
-	.contact-me { font-weight: 400; font-size: 17px; text-align: center; margin-bottom: 12px;}
-
-	.icon { padding: 0px 5px 0px 5px; }
-	.icon-twitter { color: #2DAAE4;	}
-	.icon-facebook { color: #39599F;	}
-	.icon-google-plus { color: #DD4B39; }
-	.icon-envelope { color: #000000; }
 
 /*********************************************************************************/
 /* Heading Titles                                                                */
