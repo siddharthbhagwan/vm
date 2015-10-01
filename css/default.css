@@ -1,7 +1,6 @@
 	html, body { height: 100%; }
 	
-	body
-	{
+	body {
 		margin: 0px;
 		padding: 0px;
 		font-family: 'Quattrocento Sans', sans-serif;
@@ -9,8 +8,7 @@
 		font-weight: 300;
 	}
 
-	h1, h2, h3
-	{
+	h1, h2, h3 {
 		margin: 0;
 		padding: 0;
 		font-weight: 600;
@@ -19,8 +17,7 @@
 	
 	p, ol, ul	{	margin-top: 0; }
 	
-	ol, ul
-	{
+	ol, ul {
 		padding: 0;
 		list-style: none;
 	}
@@ -75,8 +72,6 @@
 	width: 70%
 }
 
-.thumbnail { height: 150px; width: 150px; }
-
 .section2, .section3 {
 	background-color: #F8F8F8;
 }
@@ -119,6 +114,23 @@
 	font-size: 13px;
 }
 
+.center {
+	text-align: center;
+}
+
+/********************************************************************************
+/* Photos Styling                                                            */
+/*********************************************************************************/
+
+.navigation {
+	text-align: center;
+}
+
+.thumbnail {
+	margin: 0 auto;
+}
+
+
 /********************************************************************************
 /* Responsive Styling                                                            */
 /*********************************************************************************/
@@ -139,33 +151,28 @@
 
 	.image { display: inline-block;	}
 	
-	.image img
-	{
+	.image img {
 		display: block;
 		width: 85%;
 	}
 	
-	.image-full
-	{
+	.image-full {
 		display: block;
 		width: 100%;
 		margin: 0 0 2em 0;
 	}
 	
-	.image-left
-	{
+	.image-left {
 		float: left;
 		margin: 0 2em 2em 0;
 	}
 	
-	.image-centered
-	{
+	.image-centered {
 		display: block;
 		margin: 0 0 2em 0;
 	}
 	
-	.image-centered img
-	{
+	.image-centered img {
 		margin: 0 auto;
 		width: auto;
 	}
@@ -182,15 +189,13 @@
 
 	.title { margin-bottom: 3em; }
 
-	.title h2
-	{
+	.title h2 {
 		font-weight: 400;
 		font-size: 2.8em;
 		color: #323232;
 	}
 	
-	.title .byline
-	{
+	.title .byline {
 		letter-spacing: 0.15em;
 		font-weight: 400;
 		font-size: 1.1em;
@@ -206,8 +211,7 @@
 /* Header                                                                        */
 /*********************************************************************************/
 	
-	#header
-	{
+	#header {
 		position: relative;
 		height: 50px;
 		border-bottom: none;
@@ -220,24 +224,21 @@
 /* Logo                                                                          */
 /*********************************************************************************/
 
-	#logo
-	{
+	#logo {
 		position: absolute;
 		top: 1em;
 		left: 0;
 		margin-right: 25px;
 	}
 	
-	#logo h1
-	{
+	#logo h1 {
 		display: inline-block;
 		font-size: 1.25em;
 		text-transform: uppercase;
 		font-weight: 700;
 	}
 	
-	#logo a
-	{
+	#logo a {
 		text-decoration: none;
 		color: #FFF;
 	}
@@ -499,8 +500,7 @@
 
 	#wrapper { min-height: 600px;	}
 	
-	#page
-	{
+	#page	{
 		overflow: hidden;
 		padding: 6em 0em 6em 0em;
 		margin-bottom: 15px;
@@ -510,15 +510,13 @@
 /* Copyright                                                                     */
 /*********************************************************************************/
 
-	#copyright
-	{
+	#copyright {
 		overflow: hidden;
 		padding: 1em 0em;
 		border-top: 1px solid #DDDDDD;
 	}
 	
-	#copyright p
-	{
+	#copyright p {
 		letter-spacing: 0.20em;
 		text-align: center;
 		text-transform: uppercase;
@@ -526,8 +524,7 @@
 		color: #000000;
 	}
 	
-	#copyright a
-	{
+	#copyright a {
 		text-decoration: none;
 		color: #000000;
 	}
@@ -539,26 +536,17 @@
 .gallery li {
 	display: block;
 	float: left;
-	height: 100px;
 	margin-bottom: 6px;
 	margin-right: 6px;
-	width: 200px;
+	width: 150px;
 	height: 150px;
-}
-.gallery li a {
-	height: 150px;
-	width: 200px;
-}
-.gallery li a img {
-	max-width: 200px;
 }
 
 /*********************************************************************************/
 /* Featured                                                                      */
 /*********************************************************************************/
 
-	#featured-wrapper
-	{
+	#featured-wrapper {
 		overflow: hidden;
 		padding: 4em 0em;
 		background: #FFF;
@@ -571,8 +559,7 @@
 	
 	#featured h2 { text-align: center; }
 
-	#featured .icon
-	{
+	#featured .icon {
 		position: relative;
 		display: block;
 		margin: 0px auto 20px auto;
