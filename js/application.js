@@ -1,67 +1,64 @@
 $(document).ready(function(){
 
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1501046463544748',
-      xfbml      : true,
-      version    : 'v2.4',
-      cookie     : true
+  if ($("#lightGallery")) {
+    $.ajax({
+      url: 'http://api.github.com/repos/siddharthbhagwan/vm/contents/images',
+      type: 'get',
+      context: 'this',
+      success: function(response){ 
+        parseResponseData(response);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {}
     });
-
-    getPicsFromFb("me/photos?fields=picture,images&type=uploaded&access_token=CAACEdEose0cBAESVslmlk90lcpYV6vj5Ky3qZB4mdmDIYluKimPddOQk6ZA5NdmzD37nNc8SNuEA1eeQCuQMkfYn65FdmoO43K8FNTFdZBdd4XJkx8VakgIZB77ovz7GEjiPMPrVZC2TUMbobdZB9tKeBQkCLI3DSjfyRBm1clAhBelvS4DPyGc8ZBUzDFWtSG1kZAM5B4L3mwZDZD");
-  };
-
-  function getPicsFromFb(url) {
-    FB.api(
-      url,
-      function (response) {
-        if (response && !response.error) {
-          parseResponseData(response);
-        } else {
-          console.log(response.error);
-        }
-      }
-    );
   }
 
   function parseResponseData(response) {
-    var images = []; var thumbnails = [];
-    response.data.forEach(function(data){
-      images.push(data.images[0]);
-      thumbnails.push(data.picture);
-    });
-    displayImages(images, thumbnails);
+
+    var imageUrls = [];
+    response.forEach(function(imageObject) {
+      if (imageObject.download_url.indexOf('.jpg') > -1) {
+        console.log(imageObject.download_url);
+        imageUrls.push(imageObject.download_url);
+      }
+    }); 
+
+    //TODO: extract image name and use relative path instead of download_url
+
+    displayImages(imageUrls);
     setUpGallery();
-    displayLoadMoreButton(response);
+    // displayLoadMoreButton(response);
   }
 
-  function displayImages(imageObjects, thumbnailObjects) {
-    for(var i=0; i<imageObjects.length; i++){
-      $("#lightGallery").append(createThumbnail(thumbnailObjects[i], imageObjects[i].source));
+  function displayImages(imageUrls) {
+    for(var i=0; i<imageUrls.length; i++){
+      $("#lightGallery").append(createThumbnail(imageUrls[i].source));
     }
   }
 
-  function createThumbnail(thumbnailUrl, imageUrl) {
+  function createThumbnail(imageUrl) {
+
+    //TODO: generate thumbnail
+
     var image = '';
     image += "<li data-src='" + imageUrl + "' >";
-    image += "<img src='" + thumbnailUrl + "' class='thumbnail' />";
+    image += "<img src='" + imageUrl + "' class='thumbnail' />";
     image += "</li>";
     return image;
   }
 
-  function displayLoadMoreButton(response) {
-    if (response.paging.next) {
-      $("#loadMore").attr("href", response.paging.next);
-      $("#loadMore").show();
-    } else {
-      $("#loadMore").hide();
-    }
-  }
+  // function displayLoadMoreButton(response) {
+  //   if (response.paging.next) {
+  //     $("#loadMore").attr("href", response.paging.next);
+  //     $("#loadMore").show();
+  //   } else {
+  //     $("#loadMore").hide();
+  //   }
+  // }
 
-  $("#loadMore").click(function(e){
-    e.preventDefault();
-    getPicsFromFb($(this).attr('href'));
-  });
+  // $("#loadMore").click(function(e){
+  //   e.preventDefault();
+  //   getPicsFromFb($(this).attr('href'));
+  // });
 
   (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
