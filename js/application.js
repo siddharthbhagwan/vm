@@ -13,11 +13,9 @@ $(document).ready(function(){
   }
 
   function parseResponseData(response) {
-
     var imageUrls = [];
     response.forEach(function(imageObject) {
       if (imageObject.download_url.indexOf('.jpg') > -1) {
-        console.log(imageObject.download_url);
         imageUrls.push(imageObject.download_url);
       }
     }); 
@@ -31,7 +29,7 @@ $(document).ready(function(){
 
   function displayImages(imageUrls) {
     for(var i=0; i<imageUrls.length; i++){
-      $("#lightGallery").append(createThumbnail(imageUrls[i].source));
+      $("#lightGallery").append(createThumbnail(imageUrls[i]));
     }
   }
 
